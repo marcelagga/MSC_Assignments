@@ -1,0 +1,8 @@
+<expr> ::= <uop><expr2> | (<expr2> <biop> <expr2>) | <fn1>(<expr2>) | <fn2>(<expr2>, <expr2>) 
+<expr2> ::= <uop><expr2> | (<expr2> <biop> <expr2>) | <fn1>(<expr2>) | <fn2>(<expr2>, <expr2>) | <var> | <const>
+<biop> ::= + | - | * | /
+<uop> ::= -
+<fn2> ::= np.mod | np.pow | np.arctan2
+<fn1> ::= np.sin | np.sqrt | np.log
+<var> ::= x[0] | x[1] | np.sqrt((x[0] - <const>)**2 + (x[1] - <const>)**2)
+<const> ::= 0.001 | 0.01 | 0.1 | 1.0 | 10.0

@@ -1,0 +1,147 @@
+---
+author: "James McDermott"
+institute: "NUI Galway"
+title: "CT5132/CT5148 Week 12 Exercises"
+output:
+  beamer_presentation:
+    colortheme: "rose"
+    fonttheme: "structurebold"
+    theme: "Madrid"
+    slide_level: 2
+    fig_caption: false
+    includes:
+      in_header: beamer-header.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Exercises
+
+Again this week, our exercises are extracted from the lecture slides/videos, and solutions are given below.
+
+We won't look at the exercises for `ggplot`, as the Data Visualisation module is coming up soon where you'll see that in much more detail.
+
+## Exercises (`dplyr` joins)
+
+1. Read the three data files `rentals.csv`, `movies.csv`, `customers.csv`, all in the `data/` directory, as tibbles.
+2. Optional: get R to read the Date column correctly. Hint: https://readr.tidyverse.org/reference/parse_datetime.html
+3. Using a `dplyr` join command, create a table showing the customer name and address for every rental.
+4. Piping the result into another join command, recreate the full original table as shown under "Before Normalisation" above.
+5. Notice the columns `Name.x` and `Name.y` which appear because there is a `Name` column in each of the Movies and Customers tables. Rename them.
+6. Calculate the number of movies Frida watched of the Sci-fi genre.
+
+## Solutions (`dplyr` joins)
+
+```{r}
+library(tidyverse)
+```
+
+
+## Exercises 1 and 2:
+```{r}
+rentals <- read_csv("data/rentals.csv", 
+                    col_types=cols(Date=col_date(
+                      format="%d-%b-%Y")))
+movies <- read_csv("data/movies.csv")
+customers <- read_csv("data/customers.csv")
+```
+
+## Customer name and address for each rental
+```{r}
+inner_join(rentals, customers, by="CustomerID")
+```
+
+## Recreate original table
+```{r}
+inner_join(rentals, customers, by="CustomerID") %>% 
+  inner_join(movies, by="MovieID")
+```
+
+## Rename columns
+
+```{r}
+t = inner_join(rentals, customers, by="CustomerID") %>% 
+  inner_join(movies, by="MovieID") %>% 
+  rename(CustomerName=Name.x, MovieTitle=Name.y)
+t
+```
+
+## Filter and count
+
+```{r}
+t %>% filter(CustomerName=="Frida", Genre=="Sci-fi") %>% 
+  count()
+```
+
+## Filter and count
+
+The following is a solution to the problem, but it requires the programmer to do all the work in their head. That's not scalable or flexible and it's error-prone, so don't do this.
+```{r}
+# Frida is CustomerID 2
+# Movies 101 and 104 are Sci-fi
+rentals %>% filter(CustomerID == 2, 
+                   MovieID %in% c(101, 104)) %>%
+  count()
+```
+
+
+
+
+## Exercises
+
+1. In the `mpg` dataset (part of the tidyverse), calculate the mean and standard deviation of the highway fuel efficiency.
+2. Using `group_by`, calculate the mean and standard deviation of the highway fuel efficiency per manufacturer.
+3. Calculate the correlation between highway fuel efficiency and engine size.
+4. What was the average highway fuel efficiency in 1999 and in 2008?
+5. Carry out a two-sample independent t-test between highway fuel efficiency in 1999 and 2008 and interpret the result.
+6. Carry out a regression on highway fuel efficency by displacement.
+
+## Solution 1
+library(tidyverse)
+
+```{r}
+mean(mpg$hwy)
+sd(mpg$hwy)
+```
+
+## Solution 2
+```{r}
+mpg %>% group_by(manufacturer) %>% 
+  summarise(mean=mean(hwy), sd=sd(hwy))
+```
+
+## Solution 3
+
+```{r}
+cor(mpg$hwy, mpg$displ)
+```
+
+## Solution 4
+```{r}
+mpg %>% group_by(year) %>% 
+  summarise(mean=mean(hwy), sd=sd(hwy))
+```
+
+## Solution 5
+```{r}
+mpg1999 <- mpg %>% filter(year == 1999)
+mpg2008 <- mpg %>% filter(year == 2008)
+t.test(mpg1999$hwy, mpg2008$hwy)
+```
+
+## Solution 6
+
+```{r}
+res = lm(hwy ~ displ, data=mpg)
+summary(res)
+```
+
+
+
+
+
+

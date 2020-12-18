@@ -1,0 +1,340 @@
+
+Ireland's High-Performance Computing Centre | ICHEC
+National Service Project Application & Management (Login) | User Account Registration | Main ICHEC Website
+Account Management
+Update Details
+
+To update your personal details (for example, to change your name, email address, institution, job title), please raise a ticket with our Helpdesk.
+
+Password Change
+
+To change your ICHEC password please use the following webform:
+
+Password Change Form
+Close Account
+
+To close your account, please raise a ticket with our Helpdesk.
+
+Condominium Service
+Request Access
+
+To request access to your local Institution's condominium, you should contact your Access Contact Point.
+
+Project Applications
+National Service Project Application
+
+To apply for a National HPC Service project please review the information on the use this web form:
+
+Full National Service Application Form
+Project Management
+Groups where you have PI rights
+Project name 	Project description 	# Pending applications 	Management interface
+ngcom018c 	NUI Galway MSc Artificial Intelligence Online Student Projects 2020-2021 	0 	Manage
+ngcom019c 	NUI Galway MSc Artificial Intelligence Classroom Student Projects 2020-2021 	0 	Manage
+Groups where you are not a member
+Full Service Projects
+Class A Projects
+Project name 	Project description 	PI name 	Apply to join
+ndmat033a 	HIGHWAVE (Highly energetic waves) 	Frederic Dias 	Apply
+nmlif043a 	The architecture of the LxCxE linear motif and its role in modulating the binding affinity to the Retinoblastoma protein (pRb) tumour-suppressor 	Elisa Fadda 	Apply
+tcche089a 	Accelerated Discovery of Molecular Oxygen Evolving Catalysts for Energy Conversion and Storage Technologies based on Water Splitting 	Max Garcia Melchor 	Apply
+tiche101a 	SimALP: Simulation of Atomic Level Processing 	Michael Nolan 	Apply
+ulphy033a 	Neurotoxic protein assembly: uncovering the mystery of new targets 		Apply
+Class B Projects
+Project name 	Project description 	PI name 	Apply to join
+dcche012b 	First-Principles Elastic Properties of Active Pharmaceutical Ingredients 	Anthony Reilly 	Apply
+dcche015b 	First-Principles Study of the Different Energetic Contribution to the Stability of Paracetamol and Piroxicam Co-crystals 	Joaquin Klug 	Apply
+dsast023b 	3D Magnetohydrodynamic Simulations of Stellar Wind Bubbles 	Jonathan Mackey 	Apply
+icche005b 	Elucidation of the guanylating reaction mechanism involving HgCl2 and AuCl 	Goar Sanchez 	Apply
+iclif002b 	Consortium support: Molecular Dynamics on biological systems 	Goar Sanchez 	Apply
+iecom001b 	The Development of an Assistive Deep Learning Algorithms for Automated Cattle Monitoring Applications 	Joseph Walsh 	Apply
+mulif003b 	Irish National Coronavirus Sequencing Consortium 	David Fitzpatrick 	Apply
+ndche023b 	Theoretical and experimental validation of heterocyclic Wittig reaction PES 	Kirill Nikitin 	Apply
+ndeng056b 	Finite volume methods for metal forming combined with deep learning. 	Philip Cardiff 	Apply
+ndlif078b 	Design of protein-based sensors for Covid 19 	Donal MacKernan 	Apply
+ndlif079b 	Analysis of genome sequencing data from cancer patient samples 	Simon Furney 	Apply
+ndphy098b 	Using FDTD electromagnetic simulations to optimize sub-diffraction limited imaging. 	Dominic Zerulla 	Apply
+ndphy101b 	Molecular Dynamics Simulations of Adsorption of Amino Acid Side Chain Analogues and silver binding protein AG4 on Ag{100}, Ag{101}, and Ag{001} surfaces. 	Julia (Yulia) Subbotina 	Apply
+ndphy102b 	Molecular Dynamics Simulations of Adsorption of Amino Acid Side Chain Analogues and onto Polymeric Nanoparticles. 	Julia (Yulia) Subbotina 	Apply
+ndphy111b 	The separation and stabilization of layered materials in presence of solvent molecules and alkali metal atoms: An energetics and dynamics study 	Nuala Caffrey 	Apply
+ndphy112b 	Computational modelling of conformational transitions in cancer-related K-Ras proteins using stochastic methods 	Nicolae-Viorel Buchete 	Apply
+ngche071b 	Thermochemical Database of Oxygenates: CxHyOz Species (x=y=1,2; z=1–8) 	John Simmie 	Apply
+ngche086b 	Study of hemin derivatives as scavengers of NO with insights from TD-DFT calculations 	Pau Farras 	Apply
+ngche087b 	Molecular dynamics investigation of albumin-peptide complexes 	David Cheung 	Apply
+ngche091b 	Simulation of protein adsorption onto peptoid brushes 	David Cheung 	Apply
+ngche092b 	Effect of metal surfaces on the conformation of a fibril forming peptide 	Kieran Somers 	Apply
+ngeng125b 	Thermodynamically Motivated Modelling Framework for Sarcomere Remodelling and Active Contractility in Cardiomyocytes 	Patrick McGarry 	Apply
+ngeng139b 	Computational Modelling of Emissions From Gas Turbines: Ensuring Experimental Reliability and Quantifying Emissions Uncertainty. 	Rory Monaghan 	Apply
+ngeng146b 	A Molecular Dynamics Investigation into the Effects of the Type-2 Diabetes on the Bone Biomechanics 	Mehdi Tavakol 	Apply
+ngeng157b 	Fluid dynamics in aerosol drug delivery technology using the finite volume particle method (FVPM) 	Nathan Quinlan 	Apply
+nglif037b 	Diversity and ecology of squamate gut microbiome 	Marylette Roa 	Apply
+nglif043b 	Expediting the diagnosis of COVID-19 in a clinical setting using AI enabled analysis of CT scans 	Aaron Golden 	Apply
+nmast001b 	Modelling Black Hole Formation in the Exascale Era 	John Regan 	Apply
+nmche024b 	Mechanistic Study of Alkyne Tetramerisation mediated by a shape-changing Rhodium Pincer Catalyst 	Tobias Kraemer 	Apply
+nmlif050b 	Role of glycosylation in the SARS-CoV-2 spike protein opening mechanism, stability and ACE2 binding 	Elisa Fadda 	Apply
+tcast012b 	Interacting winds from stars and exoplanets 	Aline Vidotto 	Apply
+tcche095b 	ORGANOCATALYSIS BY HALOGEN BONDING DONORS: A PROMISING COMPLEMENT TO HYDROGEN-BOND BASED CATALYSIS 	Cristina Trujillo 	Apply
+tcche096b 	UNDERSTANDING LADDERANE LIPIDS PACKING IN ANAMMOX BACTERIA MEMBRANES 	Isabel Rozas 	Apply
+tcche104b 	Investigation on the oxygen non-stoichiometry and defect formation in bulk and doped Ln2NiO4+δ systems (Ln = La, Pr, Nd) 	Graeme Watson 	Apply
+tceng022b 	Optimization study for air-side waste heat recovery in servers using passive and active flow control. 	Sara Battaglioli 	Apply
+tceng024b 	Aeroacoustic Modelling of Air-Cooled Hard Disk Drive Enclosures for Data Centre Environments 	Tim Persoons 	Apply
+tclif038b 	Training in Deep Neural Networks as a Model of Infant Visual Learning 	Rhodri Cusack 	Apply
+tcphy118b 	SQWIRE 2.0 - SIMULATIONS OF INTERACTING QUANTUM WIRES 	John Goold 	Apply
+tcphy128b 	First principles spin transport in novel magnetic tunnel junctions 	Maria Stamenova 	Apply
+tiche102b 	First Principles Modelling of Germanium Surfaces and Nanostructures for Nanoelectronics 	Barbara Maccioni 	Apply
+tieng019b 	Ultra-high sensitive nanowire sensors for biomedical applications 	Lida Ansari 	Apply
+tiphy054b 	First-principles calculation of phonon-limited carrier mobility in the topological insulator SnTe 	Jose Querales 	Apply
+tiphy068b 	Thermal resistance of ferroelectric domain walls in GeTe 	Ivana Savic 	Apply
+tiphy072b 	Electronic properties of semimetal nanostructures 	Stephen Fahy 	Apply
+ucast010b 	Three-Dimensional Study of a New Type of Alfvénic Shock in Collisionless Astrophysical Pair Plasmas. 	Asaf Pe'er 	Apply
+ucche018b 	Promoting the hydrogen economy via computational driven design of new photo-catalyst 	Davide Tiana 	Apply
+ucche019b 	Identify key non-covalent interactions that induce stability in crystal polymorphs using the Interacting Quantum Atoms theory 	Bruno Falcone 	Apply
+ulche065b 	Addressing the tendency of designed dual-acting co-agonistic peptides to undergo aggregation in vivo: insights from atomistic molecular simulations 	Shayon Bhattacharya 	Apply
+uleng061b 	Continued DNS Simulations of a marginally turbulent stirred vessel 	Harry Van den Akker 	Apply
+uleng066b 	Rheology of concentrated monodisperse suspensions in simple shear flow via direct numerical simulations. 	Harry Van den Akker 	Apply
+uleng069b 	Residual stress and microstructure modelling of martensitic steel bead-on-plate welds 	Noel O'Dowd 	Apply
+ulphy043b 	Impact of transition-metal ions on the polymorphism-linked aggregation of neurotoxic peptides 	Shayon Bhattacharya 	Apply
+ulphy044b 	Modulation of the electromechanical properties of amino acids via co-crystallisation 	Sarah Guerin 	Apply
+ulphy046b 	Modelling of Piezoelectric Properties of Protein Crystals 	Pierre-André Cazade 	Apply
+Class C Projects
+Project name 	Project description 	PI name 	Apply to join
+cieng010c 	Improving the Performance of Single-Sided Natural Ventilation Using Airflow Guiding Components 	Nima Najafiziarani 	Apply
+csche004c 	Investigate ketene production from vape by using DFT calculations 	Dan Wu 	Apply
+csche005c 	Activation energy analysis of the inverse electron demand Diels-Alder (iEDDA) reaction between di-substituted tetrazines and cyclopropene using DFT calculations for the development of a live-cell near infrared (NIR) fluorescent imaging probe 	Cathal Caulfield 	Apply
+cslif035c 	Determination of microbiota composition in tumour resections of cancer patients 	Manuela Salvucci 	Apply
+cslif036c 	Determination of microbiota composition in tissue from healthy individuals and cancer patients 	Manuela Salvucci 	Apply
+cslif037c 	Using FEA to predict impact of mitral dysfunction 	Claire Conway 	Apply
+cslif038c 	Characterization of two lung cancer case studies: 1)Whole-genome sequencing analysis of synchronous lung cancers 2)Whole-exome, multi-region sequencing characterization of a colorectal cancer and a pulmonary enteric adenocarcinoma diagnosed in the same patient 	Valentina Thomas 	Apply
+dcche013c 	First-Principles Preliminary Study of the Different Energetic Contributions to the Stability of Paracetamol Co-crystals 	Joaquin Klug 	Apply
+dcche014c 	Using Quantum Chemical Calculations to Model the Excited State Dynamics in The Quenching of Luminescence of Importance to Biological Imaging 	Conor Long 	Apply
+dcche016c 	First-Principles Elastic Properties of Active Pharmaceutical Ingredients 	Reabetswe Zwane 	Apply
+dcche017c 	Tracking Ultrafast Electron Dynamics in Next Generation EUV Lithography (EUVL) Materials. 	Ross McGarry 	Apply
+dceng009c 	High fidelity modelling of non-linear membranes deformations in pumps: a new coupled fluid-structure interaction model 	Ehsan Akrami 	Apply
+dsast024c 	Multiwavelength study of gamma-ray binaries and microquasars. 	Maria Chernyakova 	Apply
+dsear043c 	3-D Magnetotelluric Imaging of Fogo Volcano, Sao Miguel Island (Azores Archipelago, Portugal) and assessing the impact of topography and bathymetry on the subsurface geo- electrical structure (II) 	Colin Hogg 	Apply
+dsear044c 	High-Resolution Waveform Tomography of South America 	Bruna Chagas de Melo 	Apply
+dsear045c 	Magnetotelluric Modelling of the Lough Swilly area, Co. Donegal. 	Robert Delhaye 	Apply
+dsear046c 	3-D Magnetotelluric Imaging of Fogo Volcano, Sao Miguel Island (Azores Archipelago, Portugal) and assessing the impact of topography and bathymetry on the subsurface geo-electrical structure (III) 	Colin Hogg 	Apply
+dsear047c 	Time-reversal localisation of ocean induced seismic noise offshore Ireland 	Florian Le Pape 	Apply
+dsear048c 	Waveform Tomography of the North Atlantic with 3D varying regularization 	Nicolas Luca Celli 	Apply
+dsear049c 	Locating and tracking flowing conduits in Karst using passive seismic "listening" 	Haleh Karbala Ali 	Apply
+dsphy013c 	ETH-violation and quantum scarring in many-body systems with Hilbert space constraint 	Shane Dooley 	Apply
+gmche005c 	Thermochemistry and Kinetics of ethyl lactate 	Judith Wurmel 	Apply
+gmlif005c 	eDNA Metabarcoding for Marine Non-Indigenous species monitoring 	Sara Fernandez Fernandez 	Apply
+icche004c 	Effect of static and e/m fields on phase transition of 1h-ice nanodroplets 	Prithwish Nandi 	Apply
+iccom010c 	Internal project for MSc in Artificial Intelligence students at UL. 	Goar Sanchez 	Apply
+icear013c 	classification and localisation tasks (icear012c project continuation) 		Apply
+icear014c 	WRF-ERA5 Historical Datasets for Ireland 	Paul Nolan 	Apply
+icear015c 	Utilisation of neural networks with existing physical atmospheric models 	Christopher Werner 	Apply
+icear016c 	Multi-Decadal High-Resolution Reconstruction of the Irish Climate 	Paul Nolan 	Apply
+ichum001c 	An Investigation of Neural Machine Translation within the Irish and English Language Pairs 	Adam Ralph 	Apply
+iclif003c 	HPC and Containers for Genomics Data Science 	Simon Wong 	Apply
+icphy008c 	QuantEx: Efficient Quantum Circuit Simulation on Exascale Systems 	Niall Moran 	Apply
+icphy009c 	Investigating quantum algorithm development on HPC systems 	Lee O'Riordan 	Apply
+iecom002c 	Robotic control using DL for dairy farms 	Suman Harapanahalli 	Apply
+ismat001c 	Error Correcting Codes from Derivations of Group algebras. 	Kieran Hughes 	Apply
+isphy003c 	First-principles study of the elastic, mechanical and dynamical stability of bismuth ternary chalcogenides 	Syam Kumar Ramesh Kumar 	Apply
+muche001c 	Insight into the atomistic structure and supramolecular assembly of hydroxypropyl cellulose 	Elisa Fadda 	Apply
+muche002c 	Exploring Coordination Isomerism of Orgaoalkali Monomers 	Tobias Kraemer 	Apply
+muche003c 	Quantum Chemical Study of the Reactivity and Isomerism of an Aromatic 1,3-phosphaborine 	Tobias Kraemer 	Apply
+mucom001c 	Replay Task Placement in Large-scale Cloud Datacenter consists of Heterogeneous Computing Resources Using Server Log Data 	Dapeng Dong 	Apply
+mueng001c 	Numerical investigation of the flow field around wave energy converters 	Christian Windt 	Apply
+mulif001c 	Analysis of small molecule interactions with the SARS-CoV-2 proteases for COVID19 	Gemma Kinsella 	Apply
+mulif002c 	Assessing the genetic integrity of Irish Bombus terrestris- a genomics perspective. 	James Carolan 	Apply
+ndche027c 	Continued Theoretical Study of Arene Ru(II) alpha,alpha-Diimine Complexes for Catalytically Promoting Diels Alder Reactions 	Andrew Phillips 	Apply
+ndche028c 	Molecular Modelling of Transition Metal Catalysed Enyne Metathesis Reactions 	Niamh O'Neill 	Apply
+ndcom013c 	Explainable Factorisation Machines 	Aonghus Lawlor 	Apply
+ndcom014c 	Design and Development of a model of Total ankle arthroplasty 	Laxmi Muralidharan 	Apply
+ndcom015c 	Graph Neural Networks for Recommendation 	Aonghus Lawlor 	Apply
+ndear021c 	Creation of a robust, optimised and fully tested WRF4.1 forecast / data assimilation production system, suitable for climate modelling and/or re-analysis work. 	Ray Mc Grath 	Apply
+ndear022c 	NIMBUS³: Next-Generation Integrated Model for Better and Unified Storm Surge Simulations 	Nicole Beisiegel 	Apply
+ndear023c 	Advancing national mapping of soil moisture deficits for modelling diffuse agricultural pollution 	Ian Thomas 	Apply
+ndeng046c 	Single Track melt modelling of Selective Laser Melting 	Gowthaman Parivendhan 	Apply
+ndeng050c 	Combined Computational and Experimental Modelling of Microneedle Interaction with Human Skin 	Wenting Shu 	Apply
+ndeng051c 	Simulation of cranial bone fracture in a human head 	Aisling Ni Annaidh 	Apply
+ndeng052c 	Numerical Modeling of Bridge Aerodynamics 	Yuxiang Zhang 	Apply
+ndeng053c 	Numerical Modelling of bridge wind shielding study 	Licheng Zhu 	Apply
+ndeng054c 	Finite volume methods for metal forming combined with deep learning 	Philip Cardiff 	Apply
+ndeng055c 	Computational modelling of microneedle insertion in skin 	Aisling Ni Annaidh 	Apply
+ndeng057c 	Numerical modelling of rain-wind induced vibrations 	Yuxiang Zhang 	Apply
+ndeng058c 	Numerical Modelling study of newly designed gentle mixing device employed in Flocculation Systems 	Yi Mao 	Apply
+ndeng059c 	Application of CFD simulations in ventilation design of office spaces 	Fanqi Sun 	Apply
+ndhum004c 	Ornamento Europe 	Alexander Wilkinson 	Apply
+ndhum005c 	Ornamento Europe Phase 2 	Alexander Wilkinson 	Apply
+ndhum006c 	Bridging statistical network analysis and spatial econometrics: A simulation study 	Johan Elkink 	Apply
+ndlif076c 	Cancer genome case studies 	Simon Furney 	Apply
+ndlif077c 	Characterising renal transcriptomic and urinary metabolomic responses to weight loss interventions in diabetic kidney disease. 	William Martin 	Apply
+ndlif080c 	The Use of Whole Genome Sequencing to Investigate Outbreak Relatedness and Predict Drug Resistance in the Organism Mycobacterium tuberculosis and Staphylococcus aureus. 	Peter Flanagan 	Apply
+ndlif081c 	Carbon nanotubes and peptide binding affinities: the role of chirality 	Donal MacKernan 	Apply
+ndmat034c 	Stochastically Generated WRF Ensembles for Wind Energy Forecasting 	Seanie Griffin 	Apply
+ndphy097c 	Conformational dynamics of cancer related KRas proteins using MSM and the Milestoning method. 	Brajesh Narayan 	Apply
+ndphy099c 	Molecular Dynamics Simulations of Adsorption of Amino Acid Side Chain Analogues and silver binding protein AG4 on Ag{100}, Ag{101}, and Ag{001} surfaces. 	Julia (Yulia) Subbotina 	Apply
+ndphy100c 	Molecular Dynamics Simulations of Adsorption of Amino Acid Side Chain Analogues and onto Polymeric Nanoparticles. 	Julia (Yulia) Subbotina 	Apply
+ndphy103c 	Optimisation of Modular Proteins using Machine Learning and Simulation 	Sara Noureldin 	Apply
+ndphy104c 	Molecular Dynamics using Hybrid Scheme in Dense Systems 	Ava Finnegan 	Apply
+ndphy105c 	Molecular dynamics-based study of protein-protein interactions in nano-particle coronas 	Vigneshwari Karunakaran Annapoorani 	Apply
+ndphy106c 	Molecular dynamics-based study of protein-nanoparticle interactions in nanoparticle coronas 	Oluwaseun Ajia 	Apply
+ndphy107c 	Molecular dynamics-based study of protein-nanoparticle interactions in nanoparticle coronas 	Oluwaseun Ajia 	Apply
+ndphy108c 	Molecular dynamics-based study of protein-protein interactions in nanoparticle coronas 	Vigneshwari Karunakaran Annapoorani 	Apply
+ndphy109c 	Studies of conformational transitions in cancer-related K-Ras proteins using stochastic methods 	Nicolae-Viorel Buchete 	Apply
+ndphy110c 	Sensing organic- and bio-molecules by Raman spectroscopy on cellulose surfaces 	Pietro Ballone 	Apply
+ngche077c 	Density Functional Theory Calculations on the Adsorption of Peptide Fragments with Noble Metal Surfaces 	Kieran Somers 	Apply
+ngche078c 	Automatic Location of Multiple Minima on a Potential Energy Surface 	John Simmie 	Apply
+ngche079c 	Detailed Combustion Chemistry Validation for Sustainable Fuels_C3 	Amrit Sahu 	Apply
+ngche080c 	A kinetic study of hydrogen atom abstraction reactions by H, OH and CH3 radicals from propargylic species and their subsequent decomposition reactions 	Jennifer Power 	Apply
+ngche081c 	Progressing Marine Biodiscovery in Ireland 	Laurence Jennings 	Apply
+ngche082c 	Theoretical Study of the Thermochemical Properties of C1-C8 Hydrocarbons, Radicals, RO2 and QOOH: A Benchmark with Group Additive Values 	Manik Ghosh 	Apply
+ngche083c 	The Combustion Kinetics of the Thermal Pyrolysis and Oxidation of Some Ethylene Glycols Derivatives as Possible Biofuel Additives 	Morad El-Hendawy 	Apply
+ngche084c 	Benchmarking Internal Rotor Treatments for the Accurate Determination of Transition State Properties for the Reactions of Free Radicals with Unsaturated Hydrocarbons 	Yanjin Sun 	Apply
+ngche085c 	A theoretical and modelling study of the reactions of hydrogen atoms with isoprene 	Shijun Dong 	Apply
+ngche088c 	Establishing a unifying mechanistic picture for the formation of advanced glycation endproduct (AGE) crosslinks 	Eddie Myers 	Apply
+ngche089c 	Cluster Modelling, electronic structure, and catalytic behaviour of transition metal ion doped CaWO4 	Pau Farras 	Apply
+ngche090c 	Understanding the importance of electronic communication in bpp-based diruthenium photocatalysts 	Pau Farras 	Apply
+ngche093c 	Theoretical investigation of anticancer gallium(III)-dithiocarbamato derivatives 	Pau Farras 	Apply
+ngche094c 	A Computational Chemistry Resource Supporting Final Year Undergraduate Student Projects in Organic Chemistry at NUI Galway 	Eddie Myers 	Apply
+ngche095c 	The Combustion Kinetics of some unsaturated C3 hydrocarbon 	Manik Ghosh 	Apply
+ngche096c 	Effect of surface chemistry on the behaviour of a fibril forming protein 	Matthew Holmes 	Apply
+ngcom014c 	Gaia, A Multi-agent system for Bin Packing designed by Grammatical Evolution 	Nicola McDonnell 	Apply
+ngcom015c 	Improving Disease Diagnosis and Biomarker Identification by Combining Data-Driven Machine Learning with Knowledge Graphs. 	Ghanshyam Verma 	Apply
+ngcom016c 	Improving Disease Diagnosis and Biomarker Identification by Combining Data-Driven Machine Learning with Knowledge Graphs. 	Ghanshyam Verma 	Apply
+ngcom017c 	Image Analysis for ROCSAFE-2 : Object Detection using neural networks and Anomaly detection 	Sai Abinesh Natarajan 	Apply
+ngear014c 	Validating theoretical models of individual behaviour in fish schools with Approximate Bayesian Computation 	Sophia Wassermann 	Apply
+ngear015c 	Three-dimensional numerical modelling of the propagation of underwater noise from seismic surveys offshore Ireland 	Colin Brown 	Apply
+ngear016c 	High-resolution modelling of organic aerosols in Ireland 	Tabish Ansari 	Apply
+ngeng145c 	Deployment of Transcatheter Aortic Valve Implants 	Robert Whiting 	Apply
+ngeng147c 	Fluid dynamics in Aerogen aerosol drug delivery technology using finite volume particle method (FVPM) 	Mohsen Hassanzadeh Moghimi 	Apply
+ngeng148c 	Multiscale thermomechanical process modelling of laser beam powder bed fusion 	Wenyou Zhang 	Apply
+ngeng149c 	Functionally graded bimodal Ti6Al4V by additive manufacturing 	Yaoyi Geng 	Apply
+ngeng150c 	Long-term Finite Element Modelling of Drug-Eluting Resorbable Polymer Scaffold Implantation 	Brian O'Reilly 	Apply
+ngeng151c 	Parametric study on polymer-covered braided stents 	Ciara McKenna 	Apply
+ngeng152c 	Wave Resource Characterisation at the Galway Bay Marine and Renewable Energy Test Site 	Iulia Alina Anton 	Apply
+ngeng153c 	Fluid dynamics in aerosol drug delivery technology using the finite volume particle method (FVPM) 	Nathan Quinlan 	Apply
+ngeng154c 	Comparison of permanent and bioresorbable stents for peripheral applications 	Martina Bernini 	Apply
+ngeng155c 	Micromechanical Modelling of Additively Manufactured Alloys 	Noel Harrison 	Apply
+ngeng156c 	Design and optimization of Covered Bioresorbable, Spiral Laminar Flow Technology Stent for Peripheral Artery Applications 	Swati Nandan 	Apply
+ngeng158c 	Cerebrovascular risk predictions post-transcatheter aortic valve replacement 	David Symes 	Apply
+ngeng159c 	Evaluation of bare and covered open- and closed-cell laser-cut stents 	Ciara McKenna 	Apply
+ngeng160c 	Experimental evaluation of metallic stent prototypes 	Benedetta Isella 	Apply
+ngeng161c 	Investigation of the effect of degradation on the performance of implanted bioresorbable scaffolds. 	Brian O'Reilly 	Apply
+ngeng162c 	Investigation of Degradation in Implanted Bioresorbable Scaffolds. 	Constantino Fiuza 	Apply
+ngeng163c 	Phase transition model for additive manufacturing of Ti6Al4V alloy 	Wenyou Zhang 	Apply
+nglif033c 	Assembly and Annotation of Native Irish Sea Sponge Genomes 	Kenneth Sandoval 	Apply
+nglif034c 	The study of the evolution of oceanic squids through Genome Skimming 	Fernando A. Fernandez-Alvarez 	Apply
+nglif035c 	Using genome skimming to investigate the evolution of Cirrata. 	Morag Taite 	Apply
+nglif036c 	Investigating the evolution of bamboo corals using Ultra-Conserved Elements 	Declan Morrissey 	Apply
+nglif038c 	Quality Control, Scaffolding and Annotation of Native Irish Sea Sponge Draft Genomes 	Kenneth Sandoval 	Apply
+nglif039c 	Evolution of Deep-sea Corals 	Raissa Hogan 	Apply
+nglif040c 	Understanding substrate recognition by N- acetylglucosaminyltransferase-V (GnT-V) through MD simulations 	Sushil K. Mishra 	Apply
+nglif041c 	Solving the peptide spectrum graph using deep learning 	Kevin McDonnell 	Apply
+nglif042c 	Investigation into the use of machine learning (ML) for predicting fluid intelligence based on genotype data 	Laura Fahey 	Apply
+ngmat005c 	Moving Mesh PDEs methods for Finite Element Simulations 	Niall Madden 	Apply
+ngphy026c 	Novel optimisation of Single Plane Illumination Microscopy Imaging 	Gideon Oluniran 	Apply
+ngphy027c 	Novel Inorganic Scintillating fibres for the SARRP. 	Kevin Byrne 	Apply
+ngphy028c 	Improvements in inverse modelling of Ireland’s greenhouse gas emissions 	Damien Martin 	Apply
+ngphy029c 	First-principles study on a novel advanced nano photocatalyst for the treatment of wastewater 	Vivek Christhunathan 	Apply
+nmche025c 	An investigation into the Molecular Dynamics of Oligomannose N-Glycan's 	Carl Fogarty 	Apply
+nmche026c 	Quantum Chemical Simulations of Solvent Effects on Charged Molecules 	Kevin McGuire 	Apply
+nmeng004c 	Numerical investigation of the flow field around a heave plate for wave energy applications 	Christian Windt 	Apply
+nmlif048c 	Comparative genomics analysis of globally widespread Phytophthora pathogens 	Jamie McGowan 	Apply
+nmlif049c 	Molecular dynamics of human fucosidase in comparison to T.maritima fucosidase 	Aoife Harbison 	Apply
+tcast008c 	Numerical simulation of magnetic activity cycle in solar-type stars with different rotation rates 	Gopal Hazra 	Apply
+tcast013c 	Constraining the ionising influence of stellar cosmic rays in observed protoplanetary disks 	Donna Rodgers-Lee 	Apply
+tcche093c 	Derivates of guanidine-based DNA minor groove binders as antiprotozoal agents 	Adeyemi Rahman 	Apply
+tcche094c 	Searching for new guanidine-based kinase inhibitors for the treatment of cancer 		Apply
+tcche097c 	Parallel hydrogen bond vs Bifurcated hydrogen bonds within molecules of biochemical and medicinal interest 	Inigo Iribarren Aguirre 	Apply
+tcche098c 	Analysis of Antimalarial 1,2,4,5-tetraoxanes -based compounds 	Cristina Trujillo 	Apply
+tcche099c 	Elucidating the strength of magnetic exchange coupling in a Mn15 coordination complex. 	Swetanshu Tandon 	Apply
+tcche101c 	Investigation on the Crystal and Electronic Structure of Tin Oxides 	Julia Savioli 	Apply
+tcche102c 	The utilisation of spin density for the calculation of coupling constants. 	Swetanshu Tandon 	Apply
+tcche103c 	Novel fluorescent probes to target Guanine Quadruplexes 	Nikolina Stipanicev 	Apply
+tcche105c 	Computational Organic and Spectroscopic Laboratory 	Cristina Trujillo 	Apply
+tceng023c 	Air curtain flow control for aerodynamic noise reduction 	Gareth Bennett 	Apply
+tceng025c 	An Investigation of Pulsed Flow in Mini-channels 	Seamus O'Shaughnessy 	Apply
+tceng026c 	3D printing patient specific nitinol stents for paediatric patients (3DP4Paeds) 	Orla McGee 	Apply
+tceng027c 	Development of a computational model to simulate fatigue damage accumulation in pericardial tissue for use in bioprosthetic heart valve leaflets 	Alison Whelan 	Apply
+tceng028c 	Development of a computational model to simulate fatigue damage accumulation in pericardial tissue for use in bioprosthetic heart valve leaflets- continuation of tceng027c 	Alison Whelan 	Apply
+tclif039c 	Inbreeding and demography in ancient human populations 	Bruno Ariano 	Apply
+tclif040c 	Statistical modelling on human population history 	Shigeki Nakagome 	Apply
+tclif041c 	Statistical modelling on human population history 	Shigeki Nakagome 	Apply
+tclif042c 	Ancient Genetic Disease 	Iseult Jackson 	Apply
+tclif043c 	Genotype imputation with ancient human genomic data 	Shigeki Nakagome 	Apply
+tcphy119c 	Transport in interacting Fibonacci quasiperiodic chains 	Cecilia Chiaracane 	Apply
+tcphy120c 	Search for corrosion resistance: An ab initio exploration 	Rajarshi Tiwari 	Apply
+tcphy121c 	Multiscale modelling of Bi2Te3 for thermoelectric applications 	Aoife Lucid 	Apply
+tcphy122c 	Entropic and Enthalpic contributions to the Helmholtz free energy of interaction between commonly used solvent molecules and graphene. 	Urvesh Patil 	Apply
+tcphy123c 	Anomalous transport in the interacting Fibonacci model 	Cecilia Chiaracane 	Apply
+tcphy124c 	Anderson transition on the Bethe lattice 	Francesca Pietracaprina 	Apply
+tcphy125c 	Open quantum dynamics via periodically refreshed baths 	Archak Purkayastha 	Apply
+tcphy126c 	Evidence of anomalous transport in the interacting Fibonacci model 	Cecilia Chiaracane 	Apply
+tcphy127c 	First principles simulations of spin dynamics 	Anais Colibaba 	Apply
+tcphy129c 	Emergent magnetism at organic-inorganic interfaces 	Sumanta Bhandary 	Apply
+tcphy130c 	Non-equilibrium thermodynamics for complex quantum systems 	John Goold 	Apply
+tcphy131c 	Exchange interactions and spin dynamics in magnetoelectric Ni3TeO6 	Stella Skiadopoulou 	Apply
+tiche096c 	Water oxidation steps at modified TiO2: role of reduced cations and surface hydroxylation. 	Stephen Rhatigan 	Apply
+tiche097c 	First Principles Modelling of Germanium Surface Functionalized with Organic Chains for Molecular Doping 	Barbara Maccioni 	Apply
+tiche098c 	First Principles Modelling of Germanium Surface Functionalization with Hydrophobic Polymer Chains 	Barbara Maccioni 	Apply
+tiche099c 	SimALP: Simulation of Atomic Level Processing 	Michael Nolan 	Apply
+tiche100c 	SimALP: Simulation of Atomic Level Processing (Interim) 	Michael Nolan 	Apply
+tieng020c 	Dielectric permittivity evolution of crystalline PVA by incorporating TiO2 nanoparticles 	Lida Ansari 	Apply
+tieng021c 	Investigating electronic structure and doping options of pristine and defective GaSe 	Lida Ansari 	Apply
+tieng022c 	Electronic structure of GaSe/Si heterojunction 	Lida Ansari 	Apply
+tieng023c 	Novel nanoscale junctionless transistor based on ultrathin GaSe layer – part 1: p-type device 	Lida Ansari 	Apply
+tiphy055c 	Band offsets of novel group IV alloys from density functional theory. 	Amy Kirwan 	Apply
+tiphy056c 	Thermoelectric transport calculation based on electron-phonon coupling in IV-VI materials. 	Ransell D'Souza 	Apply
+tiphy061c 	Electronic band structure of semimetal nanostructures 	Christian Koenig 	Apply
+tiphy062c 	Investigating piezoelectric properties of Li and Nb co-doped w-AlN 	Md Noor A Alam 	Apply
+tiphy063c 	Phonon thermal transport in PbTe driven close to phase transition via strain 	Jiang Cao 	Apply
+tiphy064c 	Thermal conductivity of Germanium Telluride at the ferroelectric phase transition 	Djordje Dangic 	Apply
+tiphy065c 	Investigating piezoelectric properties of Li and Nb co-doped (using larger supercell) w-AlN 	Md Noor A Alam 	Apply
+tiphy066c 	Virtual Crystal Approximation and Structural and Electronic Properties of Bi2Te3-Based Materials for Thermoelectric Applications 	Shima Sharifi 	Apply
+tiphy067c 	Lattice thermal conductivity and thermoelectric figure of merit of PbTe driven near phase transition via strain 	Ivana Savic 	Apply
+tiphy069c 	Ferroelectric Phase Transitions in IV-VI Materials 	Djordje Dangic 	Apply
+tiphy070c 	Calculation of electron-phonon matrix elements for investigation of superconducting critical temperature in Bismuth. 	Shane O Mahony 	Apply
+tiphy071c 	Electronic properties of semimetal nanostructures 	Christian Koenig 	Apply
+tiphy073c 	Surface electron-phonon coupling in topological insulator Bi2Se3 thin film 	Jiang Cao 	Apply
+tiphy074c 	Auger recombination rates in m-plane InGaN/GaN and c-plane AlN/AlGaN quantum wells: A fully atomistic study 	Joshua McMahon 	Apply
+tuche002c 	Using Computational methods to improve the therapeutic potential of new antibiotics to address the antimicrobial resistance 	Cian O'Reilly 	Apply
+tueng003c 	Development of a red-blood-cell-incorporating computational fluid dynamics solver for cardiovascular-system fluid flow analysis 	Gerald Gallagher 	Apply
+tueng004c 	An Investigation of the Effect of Fatigue Loading of Bone Cells and Their Processes, Surrounding Micro-Cracks as a Driver of Targeted Remodelling of Bone 	Morgana Afonso 	Apply
+tueng005c 	Data-driven turbulence modelling based on machine learning 	Quanwei Sun 	Apply
+tulif003c 	Developing a Methylation Risk Score for Telomere Shortening and investigating its association with age and stress-related disorders 	Trevor Doherty 	Apply
+ucast009c 	Three-Dimensional Study of a New Type of Alfvénic Shock in Collisionless Astrophysical Pair Plasmas. 	Asaf Pe'er 	Apply
+ucche012c 	Understanding the solubility differences of organic crystals based on an Atoms in Molecules approach 	Bruno Falcone 	Apply
+ucche013c 	Design of Superior Catalysts for the Olefin Metathesis Reaction 	Gerard Pareras Niell 	Apply
+ucche014c 	Design of Superior Catalysts for the Olefin Metathesis Reaction 2.0 	Gerard Pareras Niell 	Apply
+ucche015c 	Study of polymorphs stability using computational chemistry approaches 	Vinay Kumar Reddy Cheemarla 	Apply
+ucche016c 	Identify key non-covalent interactions that induce stability in crystal polymorphs using the Interacting Quantum Atoms theory 	Bruno Falcone 	Apply
+ucche017c 	Design of Superior Catalysts for the Olefin Metathesis Reaction (Paper Revision) 	Gerard Pareras Niell 	Apply
+ulche059c 	Structural transitions in porous materials 	Matthias Vandichel 	Apply
+ulche060c 	Probing the interaction between active pharmaceutical ingredients and solvents to study their nucleation and growth kinetics 	Rodrigo Soto 	Apply
+ulche061c 	Characterising the specificity of hyaluronic acid-dopamine conjugates to dopamine receptor subtypes as potential modulators of neuroinflammation 	Shayon Bhattacharya 	Apply
+ulche062c 	Adsorption energies in various porous materials 	Matthias Vandichel 	Apply
+ulche063c 	Probing the interaction between active pharmaceutical ingredients and stabilisers for effective long-acting injectable formulations 	Fidel Mendez Canellas 	Apply
+ulche064c 	Linker rotation study in flexible MOFs 	Matthias Vandichel 	Apply
+ulche066c 	Study of IPR fullerenes from C60 til C100 	Carl Pichon 	Apply
+ulche067c 	Force field development of a new family of hybrid ultramicroporous materials (HUMs) 	Seyed Mohammad Amin Koochaki Mohammadpour 	Apply
+ulche068c 	Optimisation of IPR fullerenes from C60 to C100 	Carl Pichon 	Apply
+ulche069c 	Next generation pharmaceutical processing: A systematic approach to formulating and manufacturing Multicomponent Fixed Dose Drug Combinations and Therapeutic Hybrids 	Alice Parkes 	Apply
+ulcom004c 	Self-correcting autonomous vehicles using deep reinforcement learning with bayesian filtering for object tracking 	Brian Hourigan 	Apply
+ulcom005c 	Architect optimization of a Convolutional Network using Genetic Algorithm to solve the problem of Retinal Vessel Segmentation 	Yassir Houreh 	Apply
+ulcom006c 	Architect optimization of a Convolutional Network using Genetic Algorithm to solve the problem of Image Segmentation 	Yassir Houreh 	Apply
+ulcom007c 	Autonomous Driving-Test Observation Prediction System (ADOPS) 	Muhammad Abubaker 	Apply
+uleng065c 	Micromechanics of Composite plies 	Nastaran Nourmohammadishishvan 	Apply
+uleng067c 	Multi scale modelling and simulations of fluidic oscillators with no moving parts 	Vivek Ranade 	Apply
+uleng068c 	Computational Fluid Dynamics Modelling of Blade-Vortex Interaction Noise of a Sikorsky S-76 Rotor with Different Blade-tip Geometries 	Philip Griffin 	Apply
+uleng070c 	Multi-layer modelling and simulations of hydrodynamic cavitation with vortex diode for liquid-liquid emulsions 	Vivek Ranade 	Apply
+uleng071c 	Anastomosis Area Ratio a Predictor of In Vivo Pressure Drop Across an Arteriovenous Fistula 	Daniel Moran 	Apply
+ullif004c 	Rational design of bioactive peptides derived from dietary milk proteins as potential dipeptidyl peptidase-IV inhibitors 	Shubham Vishnoi 	Apply
+ullif005c 	Differentiating the genetic profiles of DLBCL, classical Hodgkin lymphoma and mucocutaneous ulcers 	Eanna Fennell 	Apply
+ullif006c 	Structural characterization of Cotadutide binding to class B GPCRs (GLP-1 and GCG receptor): insights from atomistic molecular simulations 	Shubham Vishnoi 	Apply
+ulphy034c 	Atomic level characterization of zinc coordinated amyloid-b42 oligomers through molecular simulation 	Shayon Bhattacharya 	Apply
+ulphy036c 	Investigation of the effect of amino acid chirality on the macroscopic properties of organic co-crystals 	Sarah Guerin 	Apply
+ulphy037c 	Molecular Engineering of Piezoelectricity in Collagen-Mimicking Peptide Assemblies 	Sarah Guerin 	Apply
+ulphy038c 	Space group symmetry implementation in CPK2 for modelling of symmetry-based properties. 	Pierre-André Cazade 	Apply
+ulphy040c 	Benchmarking Atomistic Prediction of Copper-Containing Biomolecular Crystals 	Sarah Guerin 	Apply
+ulphy041c 	Identifying redox-active memory states in metallocene films 	Damien Thompson 	Apply
+ulphy042c 	Mapping surface restructuring in adatom migration 	Damien Thompson 	Apply
+ulphy045c 	Modelling of Piezoelectric Properties of Protein Crystals 	Pierre-André Cazade 	Apply
+wicom001c 	Exploring the entanglement capacity of Simulaqron in an HPC environment. 	Jerry Horgan 	Apply
+
+Logout

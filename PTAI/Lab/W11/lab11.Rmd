@@ -1,0 +1,214 @@
+---
+author: "James McDermott"
+institute: "NUI Galway"
+title: "CT5132/CT5148 Week 11 Exercises"
+output:
+  beamer_presentation:
+    colortheme: "rose"
+    fonttheme: "structurebold"
+    theme: "Madrid"
+    slide_level: 2
+    fig_caption: false
+    includes:
+      in_header: beamer-header.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Week 11 Exercises
+
+The exercises and solutions are extracted from the lecture slides.
+
+```{r}
+library(tidyverse)
+```
+
+
+## Exercises (R Basics)
+
+1. Write the Factorial function in R, eg `fact(5)` gives `120`.
+2. Given `x <- "John"`, calculate the length in characters of `x`. Use `nchar()`.
+3. Given `xs <- c("John", "Paul", "George", "Ringo")`,
+   calculate the length of each name, using vectorisation (not a for-loop).
+4. Calculate whether each name is shorter than 5 characters.
+5. Index `xs` to keep just the names shorter than 5 characters.
+6. Write a function which unit-norms a vector, ie normalises it so that the vector length equals 1.
+   Eg `unit_norm(c(10, 10, 10, 10))` gives `0.5 0.5 0.5 0.5`.
+7. Write a function which standardises a vector, ie gets the $z$-score, ie maps it to have mean 0 and standard deviation 1.
+Eg `z_score(c(10, 6, 12, 12))` gives `0.0000000 -1.4142136  0.7071068  0.7071068`.
+
+
+
+
+## Solutions (R Basics)
+
+```{r}
+fact <- function(n) { # Exercise 1
+  if (n <= 1) {
+    1 # remember, no return statement!
+  } else {
+    n * fact(n-1)
+  }
+}
+fact(5)
+```
+
+***
+
+```{r}
+x <- "John"
+nchar(x) # Exercise 2
+xs <- c("John", "Paul", "George", "Ringo")
+nchar(xs) # Exercise 3
+nchar(xs) < 5 # Exercise 4
+xs[nchar(xs) < 5] # Exercise 5
+```
+
+*** 
+
+```{r}
+unit_norm <- function(x) { # Exercise 6
+  x / sqrt(sum(x**2))
+}
+unit_norm(c(10, 10, 10, 10))
+```
+  
+```{r}
+z_score <- function(x) { # Exercise 7
+  (x - mean(x)) / sd(x)
+}
+z_score(c(10, 6, 12, 12))
+```
+
+
+## Exercises (Tidy Data)
+
+1. Recall our experiment on running time for sorting an array of different sizes. The original data (before we added extra columns) is available in `data/sort_times_original.csv`. Read it in to a `tibble`. (You might need to set the working directory first.)
+2. Use `glimpse` to take a look. What types do the columns have?
+3. In what way is this *not* tidy data? Use `gather` to fix it. Hint: the result should have shape 50 x 3 with columns `n`, `run_number`, `run_time`.
+4. It would be nicer if `run_number` was just an integer, eg `0`, instead of `run0`. Use `separate` to split it into two parts. Hint: use `into=c("dummy", "run_number")`. 
+5. Look again at the result. We don't need that "dummy" column. Use `NA` to omit it. Hint: see `?separate` for help on `into`.
+6. Look again -- `run_number` is still not an integer! Fix this. Hint: `separate` can guess the correct type to convert to, but see `?separate` again to see how to ask it to.
+7. Write it to a file `data/sort_times_tidy.csv` using `write_csv()`.
+
+## Solutions (Tidy Data)
+
+## Exercise 1
+
+```{r}
+d <- read_csv("data/sort_times_original.csv") 
+```
+
+## Exercise 2
+
+```{r}
+glimpse(d) # All columns of type `dbl`, which is ok
+```
+
+## Exercise 3
+
+```{r}
+d <- gather(d, key="run_number", value="run_time", 
+            run0, run1, run2, run3, run4) 
+```
+
+## Exercise 4
+
+```{r}
+separate(d, run_number, 
+         into=c("dummy", "run_number"), sep=3) 
+```
+
+## Exercise 5
+
+```{r}
+separate(d, run_number, 
+         into=c(NA, "run_number"), sep=3) 
+```
+
+## Exercise 6
+
+```{r}
+d <- separate(d, run_number, 
+              into=c(NA, "run_number"), sep=3, 
+              convert=TRUE)
+d
+```
+
+## Exercise 7
+```{r}
+write_csv(d, "data/sort_times_tidy.csv")
+```
+
+
+
+
+## Exercises (`dplyr`)
+
+* Exercise 1: Our sort times data is available in tidy format as `sort_times_tidy.csv`. Use `group_by` and `summarise` to get the mean and the standard deviation for each `n`, and then for each `run_number`. 
+
+* A dataset of characters in *Star Wars* is available as `dplyr::starwars`. Exercise 2: Find all the human females. Exercise 3: Find the characters who are human *or* Wookiee. Exercise 4: Find the shortest character. Hint: recall we might need `na.rm`. Exercise 5: Add a new column called `BMI` giving the body mass index, where the formula is BMI = $m / h^2$ for mass $m$ in kg and height $h$ in metres. https://en.wikipedia.org/wiki/Body_mass_index. Exercise 6: Which character has the highest BMI?
+
+## Solutions (`dplyr`)
+
+## Exercise 1
+
+```{r}
+d <- read_csv("data/sort_times_tidy.csv")
+d %>% group_by(n) %>% 
+  summarise(mean_run_time=mean(run_time), 
+            sd_run_time=sd(run_time))
+```
+
+## Exercise 1
+
+Notice that the mean and stddev for $n=7$ million are anomalously high. One way this could occur is if our computer had a spike in CPU usage during the experiment, e.g. due to a browser loading a video.
+
+## Exercise 1
+```{r}
+d %>% group_by(run_number) %>% 
+  summarise(mean_run_time=mean(run_time), 
+            sd_run_time=sd(run_time))
+```
+
+No major anomalies this time.
+
+
+## Exercise 2
+
+```{r}
+sw <- dplyr::starwars
+# human females
+sw %>% filter(species == "Human", gender == "female") 
+```
+
+## Exercise 3
+
+```{r}
+# human or Wookiee
+sw %>% filter(species == "Human" | species == "Wookiee") 
+# sw %>% filter(species %in% c("Human", "Wookiee")) # alternative
+```
+
+## Exercise 4
+
+```{r}
+sw %>% filter(height == max(height, na.rm=TRUE))
+```
+
+
+## Exercise 5
+```{r}
+# NB convert height from cm to metres before squaring
+BMI <- function(h, m) {m / (h / 100)^2}
+sw <- sw %>% mutate(bmi=BMI(height, mass))
+```
+
+## Exercise 6
+```{r}
+sw %>% filter(bmi == max(bmi, na.rm=TRUE))
+```

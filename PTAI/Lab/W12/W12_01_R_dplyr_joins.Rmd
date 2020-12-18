@@ -1,0 +1,191 @@
+---
+author: "James McDermott"
+institute: "NUI Galway"
+title: "dplyr joins"
+output:
+  beamer_presentation:
+    colortheme: "rose"
+    fonttheme: "structurebold"
+    theme: "Madrid"
+    slide_level: 2
+    fig_caption: false
+    includes:
+      in_header: beamer-header.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+
+![](img/MScAI_brand.png){width=100%}
+
+&nbsp;
+
+**`dplyr` joins**
+
+## Relational databases
+
+The main ideas of relational databases (SQL) are probably familiar to all:
+
+* A database consists of tables
+* A table consists of a set of columns
+* A column has a type, and maybe some constraints (e.g. positive integer)
+* Some column(s) may be designated as a key for the table
+
+
+## Joins
+
+* As we know, in Relational Databases, it is good practice to use *normalisation*: splitting a table up into multiple tables, to avoid duplication of information and the possibility of *update anomalies*. 3NF is the result of normalisation.
+* Doing ML/stats/analytics may require *de-normalisation* -- re-joining -- eventually to export to our ML/stats/analytics system.
+
+
+
+
+## Before normalisation
+
+![](img/sql-pre-normalised.png){width=60%}
+
+
+
+
+## After normalisation: 3rd Normal Form (3NF)
+
+![](img/sql-normalised.png){width=40%}
+
+## Key columns
+
+After normalisation, the link between data is via key columns -- in this case, the Customer ID and Movie ID columns. It is possible to put the original table back together using a **join**. We say that we join **on** the key column.
+
+## SQL
+
+In SQL, a JOIN might be something like this. This is an *implicit join*:
+
+
+```
+SELECT * FROM RENTALS, CUSTOMER 
+WHERE RENTALS.CustomerID = CUSTOMER.CustomerID;
+```
+
+&nbsp;
+
+This is an equivalent *explicit join*:
+
+```
+SELECT * FROM RENTALS JOIN CUSTOMER 
+ON RENTALS.CustomerID = CUSTOMER.CustomerID;
+```
+
+&nbsp;
+
+(This is not examinable.)
+
+## What is a join, really?
+
+* Think of join as an *operator* whose left and right operands are tables, and whose result is a table formed as the union of their columns
+
+* The *Cross join* is a good place to start. Conceptually, a cross join is a
+*Cartesian product of rows*. For every row in T1, we put it side by side
+with every row in T2. Think of that as a new joined table. Now we can
+select columns from it and filter rows using ON. In particular, we'll probably
+filter for rows where a key column in one table matches a key column in the other,
+discarding the large majority of this cross product.
+
+* Other joins just restrict the "every row in T1" and "every row in T2" parts depending on which matches actually exist.
+
+
+## Different types of joins
+
+There are a few types of joins. To distinguish them, many textbooks and cheatsheets proceed to Venn diagrams, e.g. http://www.sql-join.com/sql-join-types (below). These are helpful as mnemonics but the language of Venn diagrams is not sufficient to define the different joins.  
+
+&nbsp;
+
+![](img/sqljoin_com_join_types.png){width=90%}
+
+
+## Different types of joins (Data Wrangling Cheatsheet)
+
+![](img/R-joins-cheatsheet.png){width=55%} 
+
+
+
+
+
+
+
+## Further reading
+
+* Most people working in industry in the fields of AI, ML, Data Science, Statistics, etc., use relational databases and SQL a lot. 
+* We don't teach it, because it is usually seen as a topic for undergrad level. This MOOC is recommended as an optional catch-up or refresher:
+  * Stanford Databases https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about
+  * (The following topics in the MOOC are recommended for a "short version": Introduction, JSON, Relational Algebra (Section 1), SQL, Relational Design Theory (Section 1), Unified Modelling Language, Online Analytical Processing)
+
+
+
+
+## Exercises
+
+1. Read the three data files `rentals.csv`, `movies.csv`, `customers.csv`, all in the `data/` directory, as tibbles.
+2. Optional: get R to read the Date column correctly. Hint: https://readr.tidyverse.org/reference/parse_datetime.html
+3. Using a `dplyr` join command, create a table showing the customer name and address for every rental.
+4. Piping the result into another join command, recreate the full original table as shown under "Before Normalisation" above.
+5. Notice the columns `Name.x` and `Name.y` which appear because there is a `Name` column in each of the Movies and Customers tables. Rename them.
+6. Calculate the number of movies Frida watched of the Sci-fi genre.
+
+## Solutions
+
+```{r}
+library(tidyverse)
+```
+
+
+## Exercises 1 and 2:
+```{r}
+rentals <- read_csv("data/rentals.csv", 
+                    col_types=cols(Date=col_date(
+                      format="%d-%b-%Y")))
+movies <- read_csv("data/movies.csv")
+customers <- read_csv("data/customers.csv")
+```
+
+## Customer name and address for each rental
+```{r}
+inner_join(rentals, customers, by="CustomerID")
+```
+
+## Recreate original table
+```{r}
+inner_join(rentals, customers, by="CustomerID") %>% 
+  inner_join(movies, by="MovieID")
+```
+
+## Rename columns
+
+```{r}
+t = inner_join(rentals, customers, by="CustomerID") %>% 
+  inner_join(movies, by="MovieID") %>% 
+  rename(CustomerName=Name.x, MovieTitle=Name.y)
+t
+```
+
+## Filter and count
+
+```{r}
+t %>% filter(CustomerName=="Frida", Genre=="Sci-fi") %>% 
+  count()
+```
+
+## Filter and count
+
+The following is a solution to the problem, but it requires the programmer to do all the work in their head. That's not scalable or flexible and it's error-prone, so don't do this.
+```{r}
+# Frida is CustomerID 2
+# Movies 101 and 104 are Sci-fi
+rentals %>% filter(CustomerID == 2, 
+                   MovieID %in% c(101, 104)) %>%
+  count()
+```
+
+
+

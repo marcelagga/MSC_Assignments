@@ -1,0 +1,7 @@
+<sentence>     ::= <noun_phrase> <verb_phrase>
+<noun_phrase>  ::= <noun> | <determiner> <noun>
+<determiner>   ::= the | a
+<noun>         ::= lion | tiger | antelope
+<verb_phrase>  ::= <trans_verb> <noun_phrase> | <intrans_verb>
+<trans_verb>   ::= ate | saw | chased
+<intrans_verb> ::= slept | rested

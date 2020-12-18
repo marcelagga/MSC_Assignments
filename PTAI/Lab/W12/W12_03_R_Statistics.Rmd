@@ -1,0 +1,244 @@
+---
+author: "James McDermott"
+institute: "NUI Galway"
+title: "Statistics in R"
+output:
+  beamer_presentation:
+    colortheme: "rose"
+    fonttheme: "structurebold"
+    theme: "Madrid"
+    slide_level: 2
+    fig_caption: false
+    includes:
+      in_header: beamer-header.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.height=2, fig.width=5)
+```
+
+***
+
+![](img/MScAI_brand.png){width=100%}
+
+&nbsp;
+
+**Statistics in R**
+
+## Load Tidyverse as usual
+```{r}
+library(tidyverse)
+```
+
+## Random numbers
+
+```{r}
+x1 <- runif(20, min=0, max=2) # random uniform with bounds
+x2 <- rnorm(20) # random normal with mean 0, sd 1
+y <- x1 + x2 * rnorm(20, mean=5, sd=2) 
+ggplot(tibble(y), aes(x=y)) + geom_density()
+```
+
+## Basic statistics
+
+```{r}
+for (f in c(min, max, mean, median, sd, var, IQR, mad)) {
+  print(f(y))
+}
+```
+
+## More data summaries
+
+```{r}
+for (f in c(range, quantile, summary, fivenum)) {
+  print(f(y))
+}
+```
+
+## Correlations
+
+```{r}
+cor(x1, y) # get the correlation
+```
+
+## Correlations: statistical test
+```{r}
+cor.test(x1, y) # run a test
+```
+
+## Correlations: using results
+```{r}
+res = cor.test(x1, y) # save the result
+names(res) # see result structure
+R = res['statistic'] # extract values...
+p = res['p.value'] # ...from the result
+```
+
+
+## Null hypothesis significance testing
+
+
+## Independent 2-sample 2-sided t-test
+
+Test whether difference in means is different from 0
+
+```{r}
+t.test(x1, y) 
+```
+
+## More t-tests
+
+The `t.test` function also has options for:
+
+* 1-sided tests
+* paired tests
+* 1-sample tests.
+
+
+
+
+## Regression models
+
+The `lm` (linear model) function and variants are used for regression.
+
+```{r}
+df = tibble(x1, x2, y)
+head(df)
+```
+
+
+## Formulas
+
+R provides a special formula syntax involving the tilde `~`. It's used to specify a regression model. The left-hand side is the dependent variable, `y`. The right-hand side gives the independent variables, interactions, and transformations. So, `~` means something like "is modelled as".
+
+```
+y ~ x1 + x2
+```
+
+This says: run the formula $y = a + b_1 x_1 + b_2 x_2$
+
+## Using a formula in a regression
+
+```{r}
+res <- lm(y ~ x1 + x2, data=df) 
+summary(res) # show results
+```
+
+## Formulas with interaction
+
+If we changed `+` to `*`, we would add the interaction effect, ie we would run the formula
+
+$y = a + b_1 x_1 + b_2 x_2 + b_{12} x_1 x_2$
+
+Use `?formula` for more on this special syntax.
+
+
+## Formulas with interaction
+
+```{r}
+res <- lm(y ~ x1 * x2, data=df) 
+summary(res) # show results
+```
+
+
+
+## Formulas with transformation
+We could also use transformations. For example:
+```{r}
+res <- lm(y ~ x1 + log(x2), data=df) 
+summary(res) # show results
+```
+
+
+
+
+## One-way analysis of variance (ANOVA)
+
+Like t-test for multiple groups, again using a formula.
+```{r}
+res = aov(height ~ gender * species, data=dplyr::starwars)
+summary(res)
+```
+
+
+
+## Beyond Base R: the `caret` package
+
+* k-nearest neighbours
+* Linear regression
+* Support vector machines
+* Classification/regression trees
+* Perceptrons
+* Ensembles, including forests, bagging, boosting
+
+https://topepo.github.io/caret
+
+
+## The `caret` package
+
+The main Python competitor is `scikit-learn` which we will study later.
+
+&nbsp; 
+
+We won't go into detail on ML algorithms in this class.
+
+
+## Further reading
+
+* https://www.statmethods.net/stats/ttest.html
+* https://www.statmethods.net/stats/regression.html
+* https://www.statmethods.net/stats/anova.html
+
+
+## Exercises
+
+1. In the `mpg` dataset (part of the tidyverse), calculate the mean and standard deviation of the highway fuel efficiency.
+2. Using `group_by`, calculate the mean and standard deviation of the highway fuel efficiency per manufacturer.
+3. Calculate the correlation between highway fuel efficiency and engine size.
+4. What was the average highway fuel efficiency in 1999 and in 2008?
+5. Carry out a two-sample independent t-test between highway fuel efficiency in 1999 and 2008 and interpret the result.
+6. Carry out a regression on highway fuel efficency by displacement.
+
+## Solution 1
+library(tidyverse)
+
+```{r}
+mean(mpg$hwy)
+sd(mpg$hwy)
+```
+
+## Solution 2
+```{r}
+mpg %>% group_by(manufacturer) %>% 
+  summarise(mean=mean(hwy), sd=sd(hwy))
+```
+
+## Solution 3
+
+```{r}
+cor(mpg$hwy, mpg$displ)
+```
+
+## Solution 4
+```{r}
+mpg %>% group_by(year) %>% 
+  summarise(mean=mean(hwy), sd=sd(hwy))
+```
+
+## Solution 5
+```{r}
+mpg1999 <- mpg %>% filter(year == 1999)
+mpg2008 <- mpg %>% filter(year == 2008)
+t.test(mpg1999$hwy, mpg2008$hwy)
+```
+
+## Solution 6
+
+```{r}
+res = lm(hwy ~ displ, data=mpg)
+summary(res)
+```
+
+
+
+

@@ -1,0 +1,51 @@
+# Copied from http://www.tageo.com/index-e-ei-cities-IE.htm -- James McDermott
+#Rank	City	Population (2000)	Latitude (DD)	Longitude (DD)
+1	Dublin	1027900	53.330	-6.250
+2	Cork	195400	51.900	-8.470
+3	Limerick	85700	52.670	-8.630
+4	Galway	68600	53.280	-9.060
+5	Waterford	48300	52.260	-7.130
+6	Dundalk	34400	54.020	-6.420
+7	Bray	32300	53.210	-6.110
+8	Drogheda	28800	53.720	-6.360
+9	Swords	24100	53.450	-6.220
+10	Tralee	21200	52.280	-9.720
+11	Kilkenny	20300	52.660	-7.260
+12	Ennis	20100	52.860	-8.990
+13	Sligo	19500	54.280	-8.480
+14	Athlone	18400	53.420	-7.950
+15	Wexford	18300	52.340	-6.480
+16	Naas	18100	53.220	-6.680
+17	Clonmel	17200	52.360	-7.710
+18	Newbridge	17200	53.180	-6.800
+19	Carlow	17000	52.840	-6.920
+20	Navan	16600	53.660	-6.690
+21	Celbridge	15800	53.330	-6.550
+22	Mullingar	14800	53.530	-7.340
+23	Malahide	14600	53.450	-6.160
+24	Leixlip	14500	53.370	-6.490
+25	Greystones	13100	53.140	-6.070
+26	Letterkenny	12900	54.940	-7.740
+27	Killarney	12800	53.060	-9.520
+28	Tullamore	11100	53.280	-7.490
+29	Maynooth	11000	53.380	-6.600
+30	Port laoise	10800	53.040	-7.300
+31	Arklow	9900	52.800	-6.150
+32	Ballina	9400	54.120	-9.160
+33	Cobh	9200	51.860	-8.300
+34	Balbriggan	9100	53.610	-6.190
+35	Castlebar	9100	53.860	-9.300
+36	Shannon	9000	52.700	-8.920
+37	Enniscorthy	8800	52.500	-6.570
+38	Carrigaline	8500	51.810	-8.390
+39	Mallow	8400	52.140	-8.660
+40	Wicklow	8400	52.990	-6.050
+41	Dungarvan	7900	52.090	-7.630
+42	Skerries	7900	53.580	-6.110
+43	Laytown	7700	53.670	-6.240
+44	Thurles	7400	52.690	-7.830
+45	Longford	7300	53.730	-7.810
+46	Tramore	7200	52.160	-7.160
+47	New ross	7100	52.400	-6.950
+48	Athy	6800	52.990	-6.990
+49	Midleton	6700	51.920	-8.170

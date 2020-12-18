@@ -1,0 +1,5 @@
+<expr> ::= (<expr> <biop> <expr>) | <uop> <expr> | <var> | <const>
+<biop> ::= and | or
+<uop> ::= not
+<var> ::= x[0] | x[1] | x[2]
+<const> ::= True | False
