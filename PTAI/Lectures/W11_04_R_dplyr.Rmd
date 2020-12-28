@@ -1,0 +1,394 @@
+---
+author: "James McDermott"
+institute: "NUI Galway"
+title: "R dplyr"
+output:
+  beamer_presentation:
+    colortheme: "rose"
+    fonttheme: "structurebold"
+    theme: "Madrid"
+    slide_level: 2
+    fig_caption: false
+    includes:
+      in_header: beamer-header.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+
+![](img/MScAI_brand.png){width=100%}
+
+&nbsp;
+
+`dplyr`
+
+
+
+
+
+## `dplyr`
+
+`dplyr` is a package for relational operations on data. That is, it does stuff similar to `SQL`, which many students will be familiar with (also comparable to Excel and Pandas). In particular:
+
+* `filter` (choose rows, like SQL `where`)
+* `arrange` (sort rows)
+* `select` (choose columns, like SQL `select`)
+* `mutate` (add columns)
+* `summarise` (condense multiple values)
+* `sample_n`, `sample_frac` (for taking a quick look at a sub-sample, see also `head`)
+* `inner_join`, `left_join`, `right_join`, `full_join` (join two tables, like SQL `join`)
+
+
+## `dplyr` and the pipe operator
+
+All the `dplyr` verbs (`select`, etc.) have three things in common (from https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html):
+
+&nbsp;
+
+1. The first argument is a data frame [actually, a tibble].
+2. The subsequent arguments describe what to do with the data frame. You can refer to columns in the data frame directly without using $.
+3. The result is a new data frame 
+
+&nbsp;
+
+Therefore, it is natural to *chain* operations. That is where the *pipe* operator comes in.
+
+
+
+
+## The pipe `%>%`
+
+![The R pipe is provided by `magrittr`](img/MagrittePipe.jpg){width=60%}
+
+* In Unix, the *pipe* symbol `|` is used to pass data from one command to another, e.g. `ls | grep -v "#"`
+
+>- In `magrittr`, the pipe `%>%` passes the output of its left-hand side to become the first argument of its right-hand side.
+
+
+## The pipe `%>%`
+
+![The pipe operator](img/R_pipe.png){width=70%}
+
+&nbsp;
+
+`filter(d, month==1) %>% select(dep_delay)`
+
+## The pipe `%>%`
+
+In R, special operators are often named with double `%` symbols. The *pipe* operator `%>%` is an example. 
+
+&nbsp;
+
+`t %>% f()` means precisely `f(t)`, i.e. the output of the LHS becomes the first argument of the RHS.
+
+&nbsp;
+
+It is useful to avoid complicated nested expressions:
+
+&nbsp;
+
+`t %>% f("abc") %>% g("x", "y")` is easier to read than 
+
+&nbsp;
+
+`g(f(t, "abc"), "x", "y")` 
+
+&nbsp;
+
+(isn't it?)
+
+
+
+
+
+
+## Example: NYC Flights
+
+```{r}
+# uncomment if not already installed
+# install.packages("nycflights13") 
+library(nycflights13)
+library(tidyverse)
+```
+
+## Take a quick look at data
+```{r}
+flights 
+```
+
+## `filter`
+Let's see just flights on Jan 1:
+```{r}
+flights %>% filter(month == 1, day == 1) 
+```
+
+## `filter`
+Remember, this is internally translated to:
+```{r}
+filter(flights, month == 1, day == 1) 
+```
+
+## `filter`
+Which flight departure was delayed the longest? We can use `filter` again:
+```{r}
+flights %>% filter(dep_delay == max(dep_delay, na.rm=TRUE))
+```
+Notice that `na.rm=TRUE` *inside* `max()` is essential: consider `max(flights$dep_delay)` to see why.
+
+## Syntax notes
+1. `na.rm` argument
+2. We can refer to columns with no special syntax (not even quotes)
+3. Remember `==` for equality (I put spaces), but `=` for passing keyword arguments (I don't put spaces, as in Python).
+
+## `filter` examples
+
+Boolean AND: use comma as we already saw
+```{r}
+flights %>% filter(month == 1, day == 1) 
+```
+
+## `filter` examples
+Boolean OR: use |
+```{r}
+flights %>% filter(month == 1 | month == 12) 
+```
+
+## `filter` examples
+`%in%` operator does the same as above:
+```{r}
+flights %>% filter(month %in% c(1, 12)) 
+```
+
+## `arrange`
+
+`dplyr` becomes like a programmatic interface to Excel, e.g. sort-by-column:
+
+```{r}
+arrange(flights, dep_delay) # sort-by-column 
+```
+
+
+## `arrange`
+
+Descending order:
+```{r}
+arrange(flights, desc(dep_delay)) 
+```
+
+## `select` chooses columns
+
+```{r}
+select(flights, day, month, year)
+```
+Notice that `select` also re-orders columns according to the arguments.
+
+## `select` chooses columns
+Select all columns from year to day (behind the scenes, the columns are *numbers*):
+```{r}
+select(flights, year:day) 
+```
+
+## Using `select` to deselect
+```{r}
+select(flights, -(month:minute))
+```
+
+(Note we can't mix positive and negative)
+
+## More ways to select columns
+```{r}
+select(flights, starts_with("d"))
+```
+
+## `mutate`
+
+
+```{r}
+select(flights, year:day, ends_with("delay"), 
+              distance, air_time) %>%
+  mutate(gain=dep_delay - arr_delay) %>%
+  mutate(speed=distance / air_time * 60)
+```
+
+## `mutate`
+Remember none of these operations change the tibble itself, just return a new one. So we may decide to save the result in a new variable.
+
+```{r}
+sml <- select(flights, year:day, ends_with("delay"), 
+              distance, air_time) %>%
+  mutate(gain=dep_delay - arr_delay) %>%
+  mutate(speed=distance / air_time * 60)
+```
+
+
+## `group_by`
+
+![`group_by` illustration](img/R_groupby.png){width=75%}
+
+(R4DS)
+
+## `group_by` and `summarise` go well together
+
+```{r}
+group_by(flights, carrier) %>% 
+  summarise(dep_delay=mean(dep_delay, na.rm=TRUE))
+```
+
+Compare to Pandas `pd.group_by`.
+
+
+
+
+
+## A bigger example: `who`
+
+`who` is a dataset from the World Health Organisation which needs a lot of cleaning:
+
+&nbsp;
+
+```{r}
+who %>%
+  # gather many columns to 1
+  gather(key, value, new_sp_m014:newrel_f65, 
+         na.rm = TRUE) %>% 
+  # fix inconsistent spelling
+  mutate(key = stringr::str_replace(key, "newrel", "new_rel")) %>% 
+  # split eg "new_sp_m014" -> "new", "sp", "m014"
+  separate(key, c("new", "var", "sexage")) %>% 
+  # remove redundant/unneeded columns
+  select(-new, -iso2, -iso3) %>%  
+  # split eg "m014" -> "m", "014"
+  separate(sexage, c("sex", "age"), sep = 1) 
+```
+
+## A bigger example: `who`
+
+See https://r4ds.had.co.nz/tidy-data.html for detailed explanation.
+
+**Exercise**: look at the output of each step of this transformation, starting at `who` itself, to understand the need for the next.
+
+
+
+
+
+
+
+## Some more handy functions (some from `dplyr`)
+
+* Offset a vector of values: `lead` and `lag`
+* Cumulative calculations: `cumsum`, `cummax`, etc.
+* Where does each value come in a sort? `min_rank`
+* Counts: `n`, `n_distinct`
+
+
+
+
+
+## Functional programming in R
+
+* `dplyr` and the pipe are already examples of functional programming! E.g. all these operations don't change their input, just return a new version.
+* Our friend `map` also exists in R. It makes a list.
+* `map_dbl` and friends may be more useful since they return `vector`s. Compare `map` and `map_dbl` in the following.
+
+```
+d = 1:5
+# R uses the opposite argument ordering, compared to Python
+map(d, sqrt) 
+```
+
+```
+d = 1:5
+map_dbl(d, sqrt) 
+```
+
+## Functional programming in R
+
+```
+d %>% map_dbl(sqrt) # equivalent, using pipe
+```
+
+## Functional programming in R
+
+`map` and friends come from the `purrr` package, well-documented here: https://r4ds.had.co.nz/iteration.html#the-map-functions
+
+* The Joy of Functional Programming ACM Tech Talk webcast with Hadley Wickham can be viewed here: https://learning.acm.org/techtalks/functionalprogramming (Prerequisites: basic R, tibbles, distinction between lists, vectors, dataframes)
+
+
+## Summary
+
+* tidy data: columns are variables, rows are observations
+* tibbles
+* pipe `%>%`
+* verbs including `select`, `filter`, `mutate`, `arrange`, `rename`, `gather`, `spread`
+
+Let's look at a cheatsheet for `dplyr`: 
+
+https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+
+
+
+
+## Exercises
+
+* Exercise 1: Our sort times data is available in tidy format as `sort_times_tidy.csv`. Use `group_by` and `summarise` to get the mean and the standard deviation for each `n`, and then for each `run_number`. 
+
+* A dataset of characters in *Star Wars* is available as `dplyr::starwars`. Exercise 2: Find all the human females. Exercise 3: Find the characters who are human *or* Wookiee. Exercise 4: Find the shortest character. Hint: recall we might need `na.rm`. Exercise 5: Add a new column called `BMI` giving the body mass index, where the formula is BMI = $m / h^2$ for mass $m$ in kg and height $h$ in metres. https://en.wikipedia.org/wiki/Body_mass_index. Exercise 6: Which character has the highest BMI?
+
+## Solutions
+
+## Exercise 1
+
+```{r}
+d <- read_csv("data/sort_times_tidy.csv")
+d %>% group_by(n) %>% summarise(mean_run_time=mean(run_time), sd_run_time=sd(run_time))
+```
+
+## Exercise 1
+
+Notice that the mean and stddev for $n=7$ million are anomalously high. One way this could occur is if our computer had a spike in CPU usage during the experiment, e.g. due to a browser loading a video.
+
+## Exercise 1
+```{r}
+d %>% group_by(run_number) %>% 
+  summarise(mean_run_time=mean(run_time), 
+            sd_run_time=sd(run_time))
+```
+
+No major anomalies this time.
+
+
+## Exercise 2
+
+```{r}
+sw <- dplyr::starwars
+sw %>% filter(species == "Human", gender == "female") # human females
+```
+
+## Exercise 3
+
+```{r}
+sw %>% filter(species == "Human" | species == "Wookiee") # human or Wookiee
+sw %>% filter(species %in% c("Human", "Wookiee")) # alternative method
+```
+
+## Exercise 4
+
+```{r}
+sw %>% filter(height == max(height, na.rm=TRUE))
+```
+
+
+## Exercise 5
+```{r}
+# NB convert height from cm to metres before squaring
+BMI <- function(h, m) {m / (h / 100)^2}
+sw <- sw %>% mutate(bmi=BMI(height, mass))
+```
+
+## Exercise 6
+```{r}
+sw %>% filter(bmi == max(bmi, na.rm=TRUE))
+```
