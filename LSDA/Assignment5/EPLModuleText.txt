@@ -1,0 +1,41 @@
+/* 
+I have first created events for Pickup and Dropoff. Both events have a taxiid and a locationiid. 
+The locationid from a Pickup event will be the origin of a route and the locationid of a Dropoff event, 
+will be the  destiny of the route. Additionally, Dropoff event stores the total amount of the trip.
+*/
+
+create schema Pickup(taxiid int,locationid int);
+create schema Dropoff(taxiid int,locationid int,amount int);
+
+/*
+A route can be defined as a pair: (Pickup location (origin), Dropoff location (destiny))
+As the assignment requires to find a query for least profitables routes, I have added the 
+amount of the trip in the event. 
+*/
+
+create schema Route(pickuplocation int,dropofflocation int,amount int);
+
+/*
+The pattern used below is checking if a Pickup event is followed by a Dropoff event with the same taxiid. 
+In this case, this will be added to the route.
+*/
+
+insert into Route
+select 
+a.locationid as pickuplocation,
+b.locationid as dropofflocation,
+b.amount as amount
+from pattern[every a=Pickup -> (b=Dropoff(taxiid=a.taxiid))];
+
+/*Now, the final query can be easily calculated. On one hand, just the last 40 min routes are being considered. 
+As defined in the exercise, the profitability of a route is the sum is the sum of amounts of all taxi trips for that route. 
+While sum(amount) would just calculate the total, using group by pickuplocation and dropofflocation, calculates the 
+amount of each route. The result can be order by totalamount which by default is ascending. Therefore, limiting this result to
+10 rows will give the final query*/
+
+select pickuplocation, dropofflocation, sum(amount) as total
+from Route.win:time(40 min)
+group by pickuplocation, dropofflocation
+output snapshot every 2 events
+order by total 
+limit 10

@@ -1,0 +1,48 @@
+At: 2001-01-01 08:05:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=1, dropofflocation=2, amount=110}
+At: 2001-01-01 08:15:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=2, dropofflocation=3, amount=90}
+Statement: stmt-5
+Insert
+stmt-5-output={pickuplocation=2, dropofflocation=3, total=90}
+stmt-5-output={pickuplocation=1, dropofflocation=2, total=110}
+At: 2001-01-01 08:25:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=1, dropofflocation=3, amount=80}
+At: 2001-01-01 08:35:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=3, dropofflocation=1, amount=110}
+Statement: stmt-5
+Insert
+stmt-5-output={pickuplocation=1, dropofflocation=3, total=80}
+stmt-5-output={pickuplocation=2, dropofflocation=3, total=90}
+stmt-5-output={pickuplocation=1, dropofflocation=2, total=110}
+stmt-5-output={pickuplocation=3, dropofflocation=1, total=110}
+At: 2001-01-01 08:45:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=1, dropofflocation=3, amount=100}
+At: 2001-01-01 08:55:00.000
+Statement: stmt-5
+Insert
+stmt-5-output={pickuplocation=3, dropofflocation=1, total=110}
+stmt-5-output={pickuplocation=1, dropofflocation=3, total=180}
+At: 2001-01-01 08:55:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=1, dropofflocation=3, amount=110}
+At: 2001-01-01 09:05:00.000
+Statement: stmt-4
+Insert
+Route={pickuplocation=6, dropofflocation=7, amount=140}
+Statement: stmt-5
+Insert
+stmt-5-output={pickuplocation=3, dropofflocation=1, total=110}
+stmt-5-output={pickuplocation=6, dropofflocation=7, total=140}
+stmt-5-output={pickuplocation=1, dropofflocation=3, total=210}

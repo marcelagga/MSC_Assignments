@@ -1,0 +1,39 @@
+/*
+The events are given by the assignment and are quite self explanatory, I have decided not to comment much on 
+them. In this case, the events are following a pattern easy to follow. 
+
+1. A taxi picks up someone
+2. After 5 min, the taxi drop offs the person
+3. After 5 min, this taxi, or a different one, picks up someone
+4. After 5 min, etc...
+
+This gives a total of 7 routes that are given by these events. 
+*/
+Pickup={taxiid=10, locationid=1}
+t=t.plus(5 minutes)
+Dropoff={taxiid=10, locationid=2, amount=110}
+t=t.plus(5 minutes)
+Pickup={taxiid=10, locationid=2}
+t=t.plus(5 minutes)
+Dropoff={taxiid=10, locationid=3, amount=90}
+t=t.plus(5 minutes)
+Pickup={taxiid=20, locationid=1}
+t=t.plus(5 minutes)
+Dropoff={taxiid=20, locationid=3, amount= 80}
+t=t.plus(5 minutes)
+Pickup={taxiid=20, locationid=3}
+t=t.plus(5 minutes)
+Dropoff={taxiid=20, locationid=1, amount=110}
+t=t.plus(5 minutes)
+Pickup={taxiid=20, locationid=1}
+t=t.plus(5 minutes)
+Dropoff={taxiid=20, locationid=3, amount=100}
+t=t.plus(5 minutes)
+Pickup={taxiid=30, locationid=1}
+t=t.plus(5 minutes)
+Dropoff={taxiid=30, locationid=3, amount=110}
+t=t.plus(5 minutes)
+Pickup={taxiid=40, locationid=6}
+t=t.plus(5 minutes)
+Dropoff={taxiid=40, locationid=7, amount=140}
+t=t.plus(5 minutes)
